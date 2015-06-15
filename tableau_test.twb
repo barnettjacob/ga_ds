@@ -1,0 +1,3303 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='mac' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0318.1720                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='dw_bookings+ (housetrip_production)' inline='true' name='mysql.42143.695914814800' version='9.0'>
+      <connection class='mysql' dbname='housetrip_production' odbc-native-protocol='yes' port='3306' server='analytics-db.housetrip.com' source-charset='' username='jbarnett'>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[dw_bookings].[property_id]'>
+              </expression>
+              <expression op='[dw_properties].[property_id]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation name='dw_bookings' table='[dw_bookings]' type='table' />
+          <relation name='dw_properties' table='[dw_properties]' type='table' />
+        </relation>
+        <cols>
+          <map key='[GBV_EUR]' value='[dw_bookings].[GBV_EUR]' />
+          <map key='[NBV_EUR]' value='[dw_bookings].[NBV_EUR]' />
+          <map key='[accepted_date]' value='[dw_bookings].[accepted_date]' />
+          <map key='[availability_request_id]' value='[dw_bookings].[availability_request_id]' />
+          <map key='[average_future_price]' value='[dw_properties].[average_future_price]' />
+          <map key='[average_rating]' value='[dw_properties].[average_rating]' />
+          <map key='[avg_image_file_size]' value='[dw_properties].[avg_image_file_size]' />
+          <map key='[bedrooms]' value='[dw_properties].[bedrooms]' />
+          <map key='[booking_id]' value='[dw_bookings].[booking_id]' />
+          <map key='[cancellation_policy]' value='[dw_properties].[cancellation_policy]' />
+          <map key='[capacity]' value='[dw_properties].[capacity]' />
+          <map key='[check_in_date]' value='[dw_bookings].[check_in_date]' />
+          <map key='[check_out_date]' value='[dw_bookings].[check_out_date]' />
+          <map key='[city_tax]' value='[dw_properties].[city_tax]' />
+          <map key='[cleaning_fee]' value='[dw_properties].[cleaning_fee]' />
+          <map key='[created_date]' value='[dw_properties].[created_date]' />
+          <map key='[deposit]' value='[dw_properties].[deposit]' />
+          <map key='[destination (dw_properties)]' value='[dw_properties].[destination]' />
+          <map key='[destination]' value='[dw_bookings].[destination]' />
+          <map key='[enquiry_to_booking_rate]' value='[dw_properties].[enquiry_to_booking_rate]' />
+          <map key='[fc_attribution (dw_properties)]' value='[dw_properties].[fc_attribution]' />
+          <map key='[fc_attribution]' value='[dw_bookings].[fc_attribution]' />
+          <map key='[first_published]' value='[dw_properties].[first_published]' />
+          <map key='[first_submitted]' value='[dw_properties].[first_submitted]' />
+          <map key='[future_rates]' value='[dw_properties].[future_rates]' />
+          <map key='[guest_count]' value='[dw_bookings].[guest_count]' />
+          <map key='[hidden_from_search]' value='[dw_properties].[hidden_from_search]' />
+          <map key='[host_id (dw_properties)]' value='[dw_properties].[host_id]' />
+          <map key='[host_id]' value='[dw_bookings].[host_id]' />
+          <map key='[ib (dw_properties)]' value='[dw_properties].[ib]' />
+          <map key='[ib]' value='[dw_bookings].[ib]' />
+          <map key='[km_from_centre]' value='[dw_properties].[km_from_centre]' />
+          <map key='[latitude]' value='[dw_properties].[latitude]' />
+          <map key='[lc_attribution]' value='[dw_bookings].[lc_attribution]' />
+          <map key='[length_of_stay]' value='[dw_bookings].[length_of_stay]' />
+          <map key='[location_id (dw_properties)]' value='[dw_properties].[location_id]' />
+          <map key='[location_id]' value='[dw_bookings].[location_id]' />
+          <map key='[longitude]' value='[dw_properties].[longitude]' />
+          <map key='[nps]' value='[dw_bookings].[nps]' />
+          <map key='[photo_count]' value='[dw_properties].[photo_count]' />
+          <map key='[positive_reply_count]' value='[dw_properties].[positive_reply_count]' />
+          <map key='[positive_reply_rate]' value='[dw_properties].[positive_reply_rate]' />
+          <map key='[primary_geo_unit (dw_properties)]' value='[dw_properties].[primary_geo_unit]' />
+          <map key='[primary_geo_unit]' value='[dw_bookings].[primary_geo_unit]' />
+          <map key='[property_id (dw_properties)]' value='[dw_properties].[property_id]' />
+          <map key='[property_id]' value='[dw_bookings].[property_id]' />
+          <map key='[property_sqm]' value='[dw_properties].[property_sqm]' />
+          <map key='[published]' value='[dw_properties].[published]' />
+          <map key='[rating]' value='[dw_bookings].[rating]' />
+          <map key='[repeat_type]' value='[dw_bookings].[repeat_type]' />
+          <map key='[review_count]' value='[dw_properties].[review_count]' />
+          <map key='[rfc_attribution (dw_properties)]' value='[dw_properties].[rfc_attribution]' />
+          <map key='[rfc_attribution]' value='[dw_bookings].[rfc_attribution]' />
+          <map key='[sqs]' value='[dw_properties].[sqs]' />
+          <map key='[status (dw_properties)]' value='[dw_properties].[status]' />
+          <map key='[status]' value='[dw_bookings].[status]' />
+          <map key='[total_bookings]' value='[dw_properties].[total_bookings]' />
+          <map key='[total_enquiries]' value='[dw_properties].[total_enquiries]' />
+          <map key='[type_of_property]' value='[dw_properties].[type_of_property]' />
+          <map key='[type_of_space]' value='[dw_properties].[type_of_space]' />
+          <map key='[user_country]' value='[dw_bookings].[user_country]' />
+          <map key='[user_id]' value='[dw_bookings].[user_id]' />
+          <map key='[weeks_ahead]' value='[dw_bookings].[weeks_ahead]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>booking_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[booking_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>booking_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>32</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[host_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>host_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[property_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>property_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[location_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>destination</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[destination]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>destination</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_geo_unit</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[primary_geo_unit]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>primary_geo_unit</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[user_country]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>user_country</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accepted_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[accepted_date]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>accepted_date</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>check_in_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[check_in_date]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>check_in_date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>check_out_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[check_out_date]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>check_out_date</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>length_of_stay</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[length_of_stay]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>length_of_stay</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weeks_ahead</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[weeks_ahead]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>weeks_ahead</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>guest_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[guest_count]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>guest_count</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ib</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ib]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>ib</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_request_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[availability_request_id]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>availability_request_id</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fc_attribution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[fc_attribution]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>fc_attribution</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>64</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rfc_attribution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[rfc_attribution]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>rfc_attribution</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>64</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lc_attribution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lc_attribution]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>lc_attribution</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>64</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>repeat_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[repeat_type]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>repeat_type</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>32</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NBV_EUR</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[NBV_EUR]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>NBV_EUR</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>8</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GBV_EUR</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[GBV_EUR]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>GBV_EUR</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>8</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nps</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[nps]</local-name>
+            <parent-name>[dw_bookings]</parent-name>
+            <remote-alias>nps</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[property_id (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>property_id</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[created_date]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>created_date</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_published</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[first_published]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>first_published</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_submitted</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[first_submitted]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>first_submitted</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[host_id (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>host_id</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[location_id (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>published</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[published]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>published</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hidden_from_search</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[hidden_from_search]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>hidden_from_search</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>destination</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[destination (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>destination</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_geo_unit</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[primary_geo_unit (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>primary_geo_unit</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <scale>12</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <scale>12</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type_of_space</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[type_of_space]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>type_of_space</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type_of_property</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[type_of_property]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>type_of_property</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[review_count]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>review_count</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_rating</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[average_rating]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>average_rating</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sqs</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sqs]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>sqs</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_sqm</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[property_sqm]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>property_sqm</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ib</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ib (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>ib</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>capacity</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[capacity]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>capacity</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancellation_policy</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[cancellation_policy]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>cancellation_policy</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fc_attribution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[fc_attribution (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>fc_attribution</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rfc_attribution</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[rfc_attribution (dw_properties)]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>rfc_attribution</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>km_from_centre</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[km_from_centre]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>km_from_centre</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <scale>1</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>photo_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[photo_count]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>photo_count</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_image_file_size</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[avg_image_file_size]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>avg_image_file_size</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_enquiries</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[total_enquiries]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>total_enquiries</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>positive_reply_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[positive_reply_count]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>positive_reply_count</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>positive_reply_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[positive_reply_rate]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>positive_reply_rate</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_bookings</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[total_bookings]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>total_bookings</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enquiry_to_booking_rate</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[enquiry_to_booking_rate]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>enquiry_to_booking_rate</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>1</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>future_rates</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[future_rates]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>future_rates</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_future_price</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[average_future_price]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>average_future_price</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleaning_fee</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[cleaning_fee]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>cleaning_fee</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_tax</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[city_tax]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>city_tax</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deposit</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[deposit]</local-name>
+            <parent-name>[dw_properties]</parent-name>
+            <remote-alias>deposit</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Gbv Eur' datatype='real' name='[GBV_EUR]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Nbv Eur' datatype='real' name='[NBV_EUR]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Accepted Date' datatype='date' name='[accepted_date]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Availability Request Id' datatype='integer' name='[availability_request_id]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Average Future Price' datatype='real' name='[average_future_price]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Average Rating' datatype='integer' name='[average_rating]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Avg Image File Size' datatype='integer' name='[avg_image_file_size]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Bedrooms' datatype='integer' name='[bedrooms]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Booking Id' datatype='integer' name='[booking_id]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Cancellation Policy' datatype='string' name='[cancellation_policy]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Capacity' datatype='integer' name='[capacity]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Check In Date' datatype='date' name='[check_in_date]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Check Out Date' datatype='date' name='[check_out_date]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='City Tax' datatype='real' name='[city_tax]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Cleaning Fee' datatype='integer' name='[cleaning_fee]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Created Date' datatype='date' name='[created_date]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Deposit' datatype='integer' name='[deposit]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Destination (Dw Properties)' datatype='string' name='[destination (dw_properties)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Destination' datatype='string' name='[destination]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Enquiry To Booking Rate' datatype='real' name='[enquiry_to_booking_rate]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Fc Attribution (Dw Properties)' datatype='string' name='[fc_attribution (dw_properties)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Fc Attribution' datatype='string' name='[fc_attribution]' role='dimension' type='nominal'>
+      </column>
+      <column caption='First Published' datatype='date' name='[first_published]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='First Submitted' datatype='date' name='[first_submitted]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Future Rates' datatype='integer' name='[future_rates]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='Sum' caption='Guest Count' datatype='integer' name='[guest_count]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Hidden From Search' datatype='integer' name='[hidden_from_search]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Host Id (Dw Properties)' datatype='integer' name='[host_id (dw_properties)]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Host Id' datatype='integer' name='[host_id]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Ib (Dw Properties)' datatype='integer' name='[ib (dw_properties)]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Ib' datatype='integer' name='[ib]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Km From Centre' datatype='real' name='[km_from_centre]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative'>
+      </column>
+      <column caption='Lc Attribution' datatype='string' name='[lc_attribution]' role='dimension' type='nominal'>
+      </column>
+      <column aggregation='Sum' caption='Length Of Stay' datatype='integer' name='[length_of_stay]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Location Id (Dw Properties)' datatype='integer' name='[location_id (dw_properties)]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Location Id' datatype='integer' name='[location_id]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative'>
+      </column>
+      <column caption='Nps' datatype='integer' name='[nps]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Photo Count' datatype='integer' name='[photo_count]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Positive Reply Count' datatype='integer' name='[positive_reply_count]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Positive Reply Rate' datatype='real' name='[positive_reply_rate]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Primary Geo Unit (Dw Properties)' datatype='string' name='[primary_geo_unit (dw_properties)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Primary Geo Unit' datatype='string' name='[primary_geo_unit]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Property Id (Dw Properties)' datatype='integer' name='[property_id (dw_properties)]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Property Id' datatype='integer' name='[property_id]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Property Sqm' datatype='real' name='[property_sqm]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Published' datatype='integer' name='[published]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Rating' datatype='integer' name='[rating]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Repeat Type' datatype='string' name='[repeat_type]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Review Count' datatype='integer' name='[review_count]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Rfc Attribution (Dw Properties)' datatype='string' name='[rfc_attribution (dw_properties)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Rfc Attribution' datatype='string' name='[rfc_attribution]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Sqs' datatype='real' name='[sqs]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Status (Dw Properties)' datatype='string' name='[status (dw_properties)]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Total Bookings' datatype='integer' name='[total_bookings]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Total Enquiries' datatype='integer' name='[total_enquiries]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Type Of Property' datatype='string' name='[type_of_property]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Type Of Space' datatype='string' name='[type_of_space]' role='dimension' type='nominal'>
+      </column>
+      <column caption='User Country' datatype='string' name='[user_country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' caption='Weeks Ahead' datatype='integer' name='[weeks_ahead]' role='dimension' type='ordinal'>
+      </column>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='/Users/jacobbarnett/Desktop/test.tde' schema='Extract' tablename='Extract' update-time='05/19/2015 03:44:09 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[GBV_EUR]' value='[Extract].[GBV_EUR]' />
+            <map key='[NBV_EUR]' value='[Extract].[NBV_EUR]' />
+            <map key='[Number of Records]' value='[Extract].[Number of Records]' />
+            <map key='[accepted_date]' value='[Extract].[accepted_date]' />
+            <map key='[availability_request_id]' value='[Extract].[availability_request_id]' />
+            <map key='[average_future_price]' value='[Extract].[average_future_price]' />
+            <map key='[average_rating]' value='[Extract].[average_rating]' />
+            <map key='[avg_image_file_size]' value='[Extract].[avg_image_file_size]' />
+            <map key='[bedrooms]' value='[Extract].[bedrooms]' />
+            <map key='[booking_id]' value='[Extract].[booking_id]' />
+            <map key='[cancellation_policy]' value='[Extract].[cancellation_policy]' />
+            <map key='[capacity]' value='[Extract].[capacity]' />
+            <map key='[check_in_date]' value='[Extract].[check_in_date]' />
+            <map key='[check_out_date]' value='[Extract].[check_out_date]' />
+            <map key='[city_tax]' value='[Extract].[city_tax]' />
+            <map key='[cleaning_fee]' value='[Extract].[cleaning_fee]' />
+            <map key='[created_date]' value='[Extract].[created_date]' />
+            <map key='[deposit]' value='[Extract].[deposit]' />
+            <map key='[destination (dw_properties)]' value='[Extract].[destination]' />
+            <map key='[destination]' value='[Extract].[destination1]' />
+            <map key='[enquiry_to_booking_rate]' value='[Extract].[enquiry_to_booking_rate]' />
+            <map key='[fc_attribution (dw_properties)]' value='[Extract].[fc_attribution]' />
+            <map key='[fc_attribution]' value='[Extract].[fc_attribution1]' />
+            <map key='[first_published]' value='[Extract].[first_published]' />
+            <map key='[first_submitted]' value='[Extract].[first_submitted]' />
+            <map key='[future_rates]' value='[Extract].[future_rates]' />
+            <map key='[guest_count]' value='[Extract].[guest_count]' />
+            <map key='[hidden_from_search]' value='[Extract].[hidden_from_search]' />
+            <map key='[host_id (dw_properties)]' value='[Extract].[host_id]' />
+            <map key='[host_id]' value='[Extract].[host_id1]' />
+            <map key='[ib (dw_properties)]' value='[Extract].[ib]' />
+            <map key='[ib]' value='[Extract].[ib1]' />
+            <map key='[km_from_centre]' value='[Extract].[km_from_centre]' />
+            <map key='[latitude]' value='[Extract].[latitude]' />
+            <map key='[lc_attribution]' value='[Extract].[lc_attribution]' />
+            <map key='[length_of_stay]' value='[Extract].[length_of_stay]' />
+            <map key='[location_id (dw_properties)]' value='[Extract].[location_id]' />
+            <map key='[location_id]' value='[Extract].[location_id1]' />
+            <map key='[longitude]' value='[Extract].[longitude]' />
+            <map key='[nps]' value='[Extract].[nps]' />
+            <map key='[photo_count]' value='[Extract].[photo_count]' />
+            <map key='[positive_reply_count]' value='[Extract].[positive_reply_count]' />
+            <map key='[positive_reply_rate]' value='[Extract].[positive_reply_rate]' />
+            <map key='[primary_geo_unit (dw_properties)]' value='[Extract].[primary_geo_unit]' />
+            <map key='[primary_geo_unit]' value='[Extract].[primary_geo_unit1]' />
+            <map key='[property_id (dw_properties)]' value='[Extract].[property_id]' />
+            <map key='[property_id]' value='[Extract].[property_id1]' />
+            <map key='[property_sqm]' value='[Extract].[property_sqm]' />
+            <map key='[published]' value='[Extract].[published]' />
+            <map key='[rating]' value='[Extract].[rating]' />
+            <map key='[repeat_type]' value='[Extract].[repeat_type]' />
+            <map key='[review_count]' value='[Extract].[review_count]' />
+            <map key='[rfc_attribution (dw_properties)]' value='[Extract].[rfc_attribution]' />
+            <map key='[rfc_attribution]' value='[Extract].[rfc_attribution1]' />
+            <map key='[sqs]' value='[Extract].[sqs]' />
+            <map key='[status (dw_properties)]' value='[Extract].[status]' />
+            <map key='[status]' value='[Extract].[status1]' />
+            <map key='[total_bookings]' value='[Extract].[total_bookings]' />
+            <map key='[total_enquiries]' value='[Extract].[total_enquiries]' />
+            <map key='[type_of_property]' value='[Extract].[type_of_property]' />
+            <map key='[type_of_space]' value='[Extract].[type_of_space]' />
+            <map key='[user_country]' value='[Extract].[user_country]' />
+            <map key='[user_id]' value='[Extract].[user_id]' />
+            <map key='[weeks_ahead]' value='[Extract].[weeks_ahead]' />
+          </cols>
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='610516' timestamp-start='2015-05-19 15:44:09.065' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>GBV_EUR</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[GBV_EUR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GBV_EUR</remote-alias>
+              <ordinal>0</ordinal>
+              <family>dw_bookings</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>45647</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>39140.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NBV_EUR</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[NBV_EUR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NBV_EUR</remote-alias>
+              <ordinal>1</ordinal>
+              <family>dw_bookings</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30753</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>-1660.3900000000001</statistic>
+                <statistic aggregation='Max' datatype='real'>6800.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>2</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>accepted_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[accepted_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>accepted_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>dw_bookings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1960</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-09#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2015-05-19#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_request_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[availability_request_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_request_id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>515406</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>13682279</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>29</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_future_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[average_future_price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>average_future_price</remote-alias>
+              <ordinal>5</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2906</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.90000000000000002</statistic>
+                <statistic aggregation='Max' datatype='real'>999999.98999999999</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_rating</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[average_rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>average_rating</remote-alias>
+              <ordinal>6</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Max' datatype='integer'>5</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_image_file_size</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[avg_image_file_size]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_image_file_size</remote-alias>
+              <ordinal>7</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>93391</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>2507</statistic>
+                <statistic aggregation='Max' datatype='integer'>14194352</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bedrooms</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[bedrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bedrooms</remote-alias>
+              <ordinal>8</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>15</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>booking_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[booking_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>booking_id</remote-alias>
+              <ordinal>9</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>610516</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>21</statistic>
+                <statistic aggregation='Max' datatype='integer'>2418023</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>30</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancellation_policy</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cancellation_policy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancellation_policy</remote-alias>
+              <ordinal>10</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;long_run&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;strict_50_0&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>15</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>capacity</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[capacity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>capacity</remote-alias>
+              <ordinal>11</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>60</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>check_in_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[check_in_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>check_in_date</remote-alias>
+              <ordinal>12</ordinal>
+              <family>dw_bookings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2280</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-16#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2025-09-25#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>check_out_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[check_out_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>check_out_date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>dw_bookings</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2290</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-17#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2101-06-13#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city_tax</remote-name>
+              <remote-type>4</remote-type>
+              <local-name>[city_tax]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city_tax</remote-alias>
+              <ordinal>14</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>325</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>31513.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;float&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleaning_fee</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[cleaning_fee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleaning_fee</remote-alias>
+              <ordinal>15</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>193</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>870</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>created_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[created_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>created_date</remote-alias>
+              <ordinal>16</ordinal>
+              <family>dw_properties</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1988</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2015-05-14#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>deposit</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[deposit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>deposit</remote-alias>
+              <ordinal>17</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>343</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Max' datatype='integer'>20000</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>destination</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[destination (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>destination</remote-alias>
+              <ordinal>18</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9409</approx-count>
+              <scale>1</scale>
+              <width>100</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;A Cañiza&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Żurrieq&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>400</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>20</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>destination1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[destination]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>destination1</remote-alias>
+              <ordinal>19</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9409</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;A Cañiza&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Żurrieq&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>21</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>enquiry_to_booking_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[enquiry_to_booking_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>enquiry_to_booking_rate</remote-alias>
+              <ordinal>20</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>112</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>2.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fc_attribution</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fc_attribution (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fc_attribution</remote-alias>
+              <ordinal>21</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>100</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Affiliate&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;SEM Generic&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>400</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fc_attribution1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fc_attribution]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fc_attribution1</remote-alias>
+              <ordinal>22</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>64</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Affiliate&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;SEM Generic&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>256</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>9</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_published</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[first_published]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first_published</remote-alias>
+              <ordinal>23</ordinal>
+              <family>dw_properties</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1966</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2015-05-18#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_submitted</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[first_submitted]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first_submitted</remote-alias>
+              <ordinal>24</ordinal>
+              <family>dw_properties</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1975</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2009-09-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2015-05-14#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>future_rates</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[future_rates]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>future_rates</remote-alias>
+              <ordinal>25</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>31</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>guest_count</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[guest_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>guest_count</remote-alias>
+              <ordinal>26</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>46</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hidden_from_search</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[hidden_from_search]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hidden_from_search</remote-alias>
+              <ordinal>27</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[host_id (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_id</remote-alias>
+              <ordinal>28</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51164</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>74</statistic>
+                <statistic aggregation='Max' datatype='integer'>2545444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>24</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_id1</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[host_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_id1</remote-alias>
+              <ordinal>29</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51164</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>74</statistic>
+                <statistic aggregation='Max' datatype='integer'>2545444</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>25</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ib</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[ib (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ib</remote-alias>
+              <ordinal>30</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ib1</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[ib]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ib1</remote-alias>
+              <ordinal>31</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>km_from_centre</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[km_from_centre]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>km_from_centre</remote-alias>
+              <ordinal>32</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>188</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>99.900000000000006</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>latitude</remote-alias>
+              <ordinal>33</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86071</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>-41.467684200000001</statistic>
+                <statistic aggregation='Max' datatype='real'>69.804921419639996</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lc_attribution</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lc_attribution]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lc_attribution</remote-alias>
+              <ordinal>34</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>64</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Affiliate&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;SEM Generic&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>256</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>10</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>length_of_stay</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[length_of_stay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>length_of_stay</remote-alias>
+              <ordinal>35</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>32142</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>location_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[location_id (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>location_id</remote-alias>
+              <ordinal>36</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9588</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>18918</statistic>
+                <statistic aggregation='Max' datatype='integer'>8299867</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>22</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>location_id1</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[location_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>location_id1</remote-alias>
+              <ordinal>37</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9588</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>18918</statistic>
+                <statistic aggregation='Max' datatype='integer'>8299867</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>23</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>longitude</remote-alias>
+              <ordinal>38</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86185</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>-159.48527780000001</statistic>
+                <statistic aggregation='Max' datatype='real'>174.61621241642499</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nps</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[nps]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nps</remote-alias>
+              <ordinal>39</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Max' datatype='integer'>10</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>photo_count</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[photo_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>photo_count</remote-alias>
+              <ordinal>40</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>156</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>283</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>positive_reply_count</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[positive_reply_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>positive_reply_count</remote-alias>
+              <ordinal>41</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>positive_reply_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[positive_reply_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>positive_reply_rate</remote-alias>
+              <ordinal>42</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_geo_unit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primary_geo_unit (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_geo_unit</remote-alias>
+              <ordinal>43</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>136</approx-count>
+              <scale>1</scale>
+              <width>100</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Afghanistan - Regional&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Zimbabwe - Regional&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>400</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>17</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_geo_unit1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primary_geo_unit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_geo_unit1</remote-alias>
+              <ordinal>44</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>136</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Afghanistan - Regional&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Zimbabwe - Regional&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>18</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>property_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[property_id (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>property_id</remote-alias>
+              <ordinal>45</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>97214</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>66</statistic>
+                <statistic aggregation='Max' datatype='integer'>416536</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>26</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>property_id1</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[property_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>property_id1</remote-alias>
+              <ordinal>46</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>97214</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>66</statistic>
+                <statistic aggregation='Max' datatype='integer'>416536</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>27</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>property_sqm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[property_sqm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>property_sqm</remote-alias>
+              <ordinal>47</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>868</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.089999999999999997</statistic>
+                <statistic aggregation='Max' datatype='real'>20000.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>published</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[published]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>published</remote-alias>
+              <ordinal>48</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rating</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rating</remote-alias>
+              <ordinal>49</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Max' datatype='integer'>5</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>repeat_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[repeat_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>repeat_type</remote-alias>
+              <ordinal>50</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>32</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;new&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;repeat&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>128</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_count</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[review_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_count</remote-alias>
+              <ordinal>51</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>122</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>191</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rfc_attribution</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rfc_attribution (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rfc_attribution</remote-alias>
+              <ordinal>52</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>100</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Affiliate&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;SEM Generic&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>400</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>11</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rfc_attribution1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rfc_attribution]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rfc_attribution1</remote-alias>
+              <ordinal>53</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>64</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Affiliate&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;SEM Generic&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>256</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>12</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sqs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sqs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sqs</remote-alias>
+              <ordinal>54</ordinal>
+              <family>dw_properties</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>1.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status (dw_properties)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status</remote-alias>
+              <ordinal>55</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <scale>1</scale>
+              <width>20</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;inactive&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;live&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>80</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status1</remote-alias>
+              <ordinal>56</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>32</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;accepted&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;cancelled_by_host&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>128</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>13</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_bookings</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[total_bookings]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_bookings</remote-alias>
+              <ordinal>57</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>213</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>499</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_enquiries</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[total_enquiries]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_enquiries</remote-alias>
+              <ordinal>58</ordinal>
+              <family>dw_properties</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1086</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Max' datatype='integer'>8195</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>type_of_property</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[type_of_property]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>type_of_property</remote-alias>
+              <ordinal>59</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <scale>1</scale>
+              <width>50</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;apartment&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;studio&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>200</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>16</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>type_of_space</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[type_of_space]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>type_of_space</remote-alias>
+              <ordinal>60</ordinal>
+              <family>dw_properties</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>50</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;entire_property&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;shared_room&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>200</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>14</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[user_country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_country</remote-alias>
+              <ordinal>61</ordinal>
+              <family>dw_bookings</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>223</approx-count>
+              <scale>1</scale>
+              <width>255</width>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Afghanistan&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Zimbabwe&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;root&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1020</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>19</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>62</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>483466</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>74</statistic>
+                <statistic aggregation='Max' datatype='integer'>2552345</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>28</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weeks_ahead</remote-name>
+              <remote-type>2</remote-type>
+              <local-name>[weeks_ahead]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weeks_ahead</remote-alias>
+              <ordinal>63</ordinal>
+              <family>dw_bookings</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>583</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='dw_bookings+ (housetrip_production)' name='mysql.42143.695914814800' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.42143.695914814800'>
+            <column caption='Nbv Eur' datatype='real' name='[NBV_EUR]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Accepted Date' datatype='date' name='[accepted_date]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[NBV_EUR]' derivation='Sum' name='[sum:NBV_EUR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[accepted_date]' derivation='Year' name='[yr:accepted_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[mysql.42143.695914814800].[sum:NBV_EUR:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[mysql.42143.695914814800].[yr:accepted_date:ok]</rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[mysql.42143.695914814800].[yr:accepted_date:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='368' name='Sheet 1' width='328'>
+      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
+      EJLo/wOZ/LS/vO5niAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
